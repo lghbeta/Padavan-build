@@ -39,7 +39,7 @@ jobs:
         git clone --depth=1 https://github.com/lghbeta/padavan-4.4.git /opt/rt-n56u
         else
         #git clone --depth=1 https://github.com/chongshengB/rt-n56u.git /opt/rt-n56u
-        git clone --depth=1 https://github.com/lghbeta/rt-n56u.git /opt/rt-n56u
+        git clone --depth=1 https://github.com/lghbeta/padavan-3.4.git /opt/rt-n56u
         fi
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
