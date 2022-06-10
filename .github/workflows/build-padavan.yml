@@ -61,7 +61,7 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD/d' .config #删除配置项SMBD
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD36/d' .config #删除配置项SMBD36
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SOCAT/d' .config #删除配置项SOCAT
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_WIREGUARD/d' .config #删除WIREGUARD
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_WIREGUARD/d' .config #删除WIREGUARD(3.4仓库中不含该插件)
         sed -i '/CONFIG_FIRMWARE_INCLUDE_DOGCOM/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_MINIEAP/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT/d' .config #锐捷认证
@@ -89,9 +89,8 @@ jobs:
         ######################################################################
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD=n" >> .config #SMBD
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD36=n" >> .config #SMBD36
-        echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD=y" >> .config #WIREGUARD
         echo "CONFIG_FIRMWARE_INCLUDE_DOGCOM=n" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_MINIEAP=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_MINIEAP=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_LRZSZ=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> .config
@@ -110,8 +109,8 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config #阿里DDNS
         echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=n" >> .config #smartdns
         echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNSBIN=n" >> .config #smartdns二进制文件
-        echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=n" >> .config #集成v2ray执行文件（3.8M左右)，如果不集成，会从网上下载下来执行，不影响正常使用
-        echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=y" >> .config #集成trojan执行文件(1.1M左右)，如果不集成，会从网上下载下来执行，不影响正常使用
+        echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> .config #集成v2ray执行文件（3.8M左右)，如果不集成，会从网上下载下来执行，不影响正常使用
+        echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=n" >> .config #集成trojan执行文件(1.1M左右)，如果不集成，会从网上下载下来执行，不影响正常使用
         echo "CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=n" >> .config #KP广告过滤
         echo "CONFIG_FIRMWARE_INCLUDE_CADDY=n" >> .config #在线文件管理服务
         echo "CONFIG_FIRMWARE_INCLUDE_CADDYBIN=n" >> .config #集成caddu执行文件，此文件有13M,请注意固件大小。如果不集成，会从网上下载下来执行，不影响正常使用
