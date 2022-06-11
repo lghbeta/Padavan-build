@@ -64,6 +64,7 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ALIDDNS/d' .config #删除配置项阿里DDNS
         sed -i '/CONFIG_FIRMWARE_INCLUDE_DDNSTO/d' .config #DDNSTO
         sed -i '/CONFIG_FIRMWARE_INCLUDE_XUPNPD/d' .config #IPTV
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_TTYD/d' .config #TTYD
 
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT/d' .config #删除配置项SCUTCLIENT
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS/d' .config #删除配置项SS plus+
@@ -92,9 +93,10 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_XUPNPD=n" >> .config #IPTV
+        echo "CONFIG_FIRMWARE_INCLUDE_TTYD=n" >> .config #TTYD
         echo "CONFIG_FIRMWARE_INCLUDE_MTR=y" >> .config #traceroute,ping诊断工具
         echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=y" >> .config #socat
-        echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=y" >> .config #socks5正向代理，可以不集成(日志会出现 Global_Socks5 Can not find  program, can not start!)
+        echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=y" >> .config #socks5正向代理，可以不集成
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config #MENTOHUST锐捷认证
 
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config #阿里DDNS
