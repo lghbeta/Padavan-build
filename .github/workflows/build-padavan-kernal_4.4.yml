@@ -84,7 +84,6 @@ jobs:
         ######################################################################
         echo "CONFIG_FIRMWARE_INCLUDE_HTOP=y" >> .config #htop
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD=n" >> .config #SMBD
-        echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=y" >> .config #socat
         echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD=y" >> .config #WIREGUARD
         echo "CONFIG_FIRMWARE_INCLUDE_DOGCOM=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_MINIEAP=n" >> .config
